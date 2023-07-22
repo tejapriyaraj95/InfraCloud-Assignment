@@ -1,5 +1,15 @@
 version: '3.3'
 services:
+    prometheus:
+        image: prom/prometheus:v2.22.0
+        ports:
+            - '9090:9090'
+        command:
+        - --config.file=/etc/prometheus/prometheus.yaml
+        volumes:
+        - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+        depends_on:
+        - csvserver
     csvserver:
         ports:
             - '9393:9300'
@@ -7,5 +17,5 @@ services:
         env_file:
             - csvserver.env
         volumes:
-            - '/Users/tejapriyarajkondamudi/Documents/InfraCloud-Assignment/solutions/inputFile:/csvserver/inputdata'
+            - './inputFile:/csvserver/inputdata'
         image: 'infracloudio/csvserver:latest'
