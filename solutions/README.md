@@ -1,5 +1,25 @@
-commands used in the part1:
+# commands used in the part1:
 
+<ol>
+  <li>docker run -d --name csv infracloudio/csvserver:latest</li>
+  <li>Creating gencsv.sh script file 
+    <ol>
+      <li>vi gencsv.sh</li>
+          '''
+           #!/bin/bash
+           RANDOM=$$
+           num="$1"
+           count="$2"
+           while [[ ${num} -le ${count} ]]
+           do
+           echo $num, $RANDOM
+           (( num = num +1 ))
+           done > inputFile      
+      <li>Indented item</li>
+    </ol>
+  </li>
+  <li>Fourth item</li>
+</ol>
 1) docker run -d --name csv infracloudio/csvserver:latest
 2) vi gencsv.sh
 3) chmod +x gencsv.sh
