@@ -79,6 +79,11 @@ scrape_configs:
     - csvserver:9300 
 
 ```
+## [csvserver output](https://github.com/tejapriyaraj95/InfraCloud-Assignment/blob/main/solutions/csvserver-display.jpg):
+![alt text](https://github.com/tejapriyaraj95/InfraCloud-Assignment/blob/main/solutions/csvserver-display.jpg?raw=true)
+
+## [prometheus graph](https://github.com/tejapriyaraj95/InfraCloud-Assignment/blob/main/solutions/prometheus-graph.jpg):
+![alt text](https://github.com/tejapriyaraj95/InfraCloud-Assignment/blob/main/solutions/prometheus-graph.jpg?raw=true)
 
 ## References:
    - https://docs.docker.com/engine/reference/commandline/compose/
